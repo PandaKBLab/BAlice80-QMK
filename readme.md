@@ -1,63 +1,49 @@
-Balice80 QMK Firmware
-This repository contains the QMK firmware for the Balice80, an 85-key split ergonomic mechanical keyboard designed by PandaKB.
+# Balice80 QMK/VIAL Firmware
+This repository contains the firmware source code for the Balice80, an 85-key split ergonomic mechanical keyboard. The Balice80 features a dedicated Function row (F1-F12), dual rotary encoders, and a gasket-mounted 3D-printed PETG chassis.
 
-The Balice80 distinguishes itself with a dedicated Function row (F1-F12) and a curved key alignment optimized for ergonomic typing.
+## Hardware Specifications
+ * Layout: 85-key split layout with a dedicated F-Row and curved alignment.
+ * Case: 100% infill PETG 3D printed with magnetic quick-release.
+    * Orange USB Type-C Port: Host connection (PC).
+    * Blue USB Type-C Port: Interconnect between left and right halves.
+ * Mounting: Gasket mount with silicone dampeners.
+ * Support: Full VIAL compatibility for real-time remapping.
 
-Technical Overview
-Layout: 85 keys (Split configuration).
+## Keymap Features
+ * Dedicated F-Row: Provides direct access to F1-F12 without layer switching.
 
-Architecture: QMK Firmware with VIAL support for real-time remapping.
+ * Dual Rotary Encoders:
 
-Hardware Interface:
+	 *   Left Knob: Navigation (Default: Prev/Next; Layer 1: Up/Down).
 
-Orange Port: PC connection.
+	  * Right Knob: Media/System (Default: Volume/Mute; Layer 1: Screen Brightness).
 
-Blue Port: Interconnect between left and right halves.
+ * Standard Typing Logic: Numerical '6' is positioned on the right half. The left-side '6' position defaults to Backspace.
 
-Key Features:
+ * Compatibility: Supports standard and stepped Caps Lock keys.
 
-Dedicated F-Row for direct access without layer switching.
+## Compilation Instructions
+Copy the source code to the VIAL folder in qmk_firmware/keyboards/balice80 and run the following command to compile the firmware:
 
-Dual rotary encoders for navigation and media control.
-
-Curved layout (non-linear) to accommodate natural finger travel.
-
-Gasket-mounted structure support.
-
-Default Configuration
-Rotary Encoders
-Left Encoder:
-
-Layer 0: Previous/Next (Horizontal navigation).
-
-Layer 1: Up/Down (Vertical navigation).
-
-Right Encoder:
-
-Layer 0: Volume Up/Down (Press to Mute).
-
-Layer 1: Screen Brightness Control.
-
-Keymap Logic
-Number 6 Position: Following standard typing habits, the '6' key is located on the right half. The corresponding position on the left half is mapped to Backspace by default.
-
-Caps Lock: Supports both standard and stepped Caps Lock configurations.
-
-Build and Flash
-
-Copy the source code to the VIAL folder in qmk_firmware/keyboards/balice80 and run the following command to compile the firmware
+bash
 
 ```
-qmk compile -kb balice80 -km vial-win
+qmk compile -kb balice80 -km vial
 ```
-VIAL Support
-This firmware is pre-configured for VIAL. Users can modify keymaps, macros, and encoder behaviors without reflashing.
 
-Download the VIAL client at get.vial.today.
 
-Connect the Balice80 via the Orange port.
+## VIAL Customization
+The Balice80 is pre-configured for VIAL, allowing for keymap, macro, and encoder adjustments without code modification.
 
-The device will be recognized automatically for real-time adjustment.
+* Download the VIAL client from [https://get.vial.today/](https://get.vial.today/)
 
-About PandaKB
-PandaKB focuses on ergonomic input devices and high-precision 3D printed mechanical keyboards. For more information, visit pandakb.com.
+* Connect the Balice80 to your PC via the Orange Port.
+
+* The VIAL application will automatically recognize the device.
+
+## Manufacturing & Quality Control
+The Balice80 utilizes high-precision 3D printing (PETG). Due to the additive manufacturing process, minor surface textures may be present. Each unit is inspected and deburred for structural integrity and functional precision.
+
+## About PandaKB
+PandaKB specializes in professional ergonomic input devices.
+Website: [https://pandakb.com](https://pandakb.com)
