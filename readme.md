@@ -1,3 +1,4 @@
+
 # Balice80 QMK/VIAL Firmware
 This repository contains the firmware source code for the Balice80, an 85-key split ergonomic mechanical keyboard. The Balice80 features a dedicated Function row (F1-F12), dual rotary encoders, and a gasket-mounted 3D-printed PETG chassis.
 
